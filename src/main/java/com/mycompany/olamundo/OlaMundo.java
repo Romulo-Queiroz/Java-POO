@@ -26,5 +26,12 @@ public class OlaMundo {
        caneta2.destampar(); 
        caneta2.status();
        caneta2.rabiscar();
+       
+      Notas note = new Notas();
+      note.nota = "Criando texto e fixando";
+      note.oQueEUml();
+     
+      Notas outraNota = new Notas();
+      outraNota.contexto 
     }
 }
