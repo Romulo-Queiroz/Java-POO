@@ -1,11 +1,18 @@
 package com.mycompany.olamundo;
 
 public class Visibilidade {
-    public String modelo;
-    public String cor;
+    private String modelo;
+    private String cor;
     private double ponta;
     protected int carga;
     private boolean tampada;
+    
+    public Visibilidade(String modelo, String cor, String ponta){
+    this.modelo = modelo;
+    this.cor = cor;
+    this.ponta = 1.2;
+    }
+    
     public void status(){
         System.out.println("modelo:" + this.modelo);
         System.out.println("Uma caneta: "+ this.cor);
@@ -13,6 +20,16 @@ public class Visibilidade {
         System.out.println("Carga: " +this.carga);
         System.out.println("Está tampada? " + this.tampada);
     }
+    
+
+    
+    public String getModelo(){
+       return this.modelo;
+    }
+    public void setModelo(String m){
+        this.modelo = m; 
+    }
+    
     public void rabiscar(){
         if (this.tampada == true){
             System.out.println("Erro, não posso rabiscar, detalhes do erro: (caneta com tampa fechada)");
