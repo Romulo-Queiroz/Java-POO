@@ -11,6 +11,13 @@ public class ContaBanco {
     private float saldo;
     private boolean status;
     
+    public void estadoAtual(){
+        System.out.println("Conta: " + this.getNumDaConta());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("Status: " + this.getStatus());
+    }
+    
     //constructor
     
     public ContaBanco() {
@@ -58,15 +65,15 @@ public class ContaBanco {
     
     //Métodos 
     public void abrirConta(String t){
-        setTipo(t);
-        setStatus(true);
-        if(tipo == "cc")
+        this.setTipo(t);
+        this.setStatus(true);
+        if(t == "cc")
         {
             this.saldo = 50;  //setSaldo(50);
         }
-        else if(tipo == "p")
+        else if(t == "p")
         {
-            setSaldo(150);
+            this.setSaldo(150);
         }
               
     }
@@ -86,8 +93,8 @@ public class ContaBanco {
     }
     
     public void depositar(float v){
-        if (status == true){
-            saldo = saldo + v;
+        if (this.status == true){
+            this.saldo = this.saldo + v;
         }else
         {
             System.out.println("Você precisa abrir uma conta antes");
@@ -98,8 +105,8 @@ public class ContaBanco {
     public void sacar(float v){
         if (status == true)
         {
-         if(saldo > v){
-            saldo = saldo - v;
+         if(this.saldo > v){
+            this.saldo = this.saldo - v;
          }
          else{
              System.out.println("Erro: Saldo negativo");
@@ -111,6 +118,17 @@ public class ContaBanco {
     }
     
     public void pagarMensal(){
-       //proxima aula
+       int v;
+       if (this.getTipo()=="cc"){
+           v = 12;
+       }else if(this.getTipo() == "p"){
+           v = 20;
+       }
+       if (this.getStatus()) {
+           this.setSaldo(this.getSaldo() - v);
+           System.out.println("Mensalidadde paga com sucesso por: " + this.dono);
+       }else {
+           System.out.println("Impossível pagar");
+       }
     }
 }
