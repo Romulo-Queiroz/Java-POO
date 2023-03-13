@@ -118,13 +118,13 @@ public class ContaBanco {
     }
     
     public void pagarMensal(){
-       int v;
+       int v = 0;
        if (this.getTipo()=="cc"){
            v = 12;
        }else if(this.getTipo() == "p"){
            v = 20;
        }
-       if (this.getStatus()) {
+       else  if (this.getStatus()) {
            this.setSaldo(this.getSaldo() - v);
            System.out.println("Mensalidadde paga com sucesso por: " + this.dono);
        }else {
