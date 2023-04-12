@@ -6,7 +6,7 @@ public class Pessoa {
     private String sexo;
     
     public void fazerAniversario(){
-        this.idade = + 1;
+        this.idade ++;
     }
 
     public Pessoa(String nome, int idade, String sexo) {
@@ -38,5 +38,6 @@ public class Pessoa {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
     
 }
