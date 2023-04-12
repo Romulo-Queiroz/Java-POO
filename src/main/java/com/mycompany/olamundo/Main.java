@@ -3,18 +3,13 @@ package com.mycompany.olamundo;
 public class Main {
 
     public static void main(String[] args) {
-       // Pessoa pessoa1 = new Pessoa(); pessoa é abstrato e por isso não pode ser instanciado.
-        Visitante v1 = new Visitante("Visitante anônimo ", 0,"Indefinido");
 
-        System.out.println("Hello"+ v1.getNome() +"você tem " + v1.getIdade() +" Anos");
+      Professor professor1 = new Professor("Gustavo", 33,"Masculino");
+      Aluno aluno1 = new Aluno("Rômulo", 25, "Masculino");
 
-        Aluno aluno1 = new Aluno("Rômulo", 25, "Masculino");
-        aluno1.setCurso("Engenharia de Software");
-        aluno1.setMatricula(2021);
-        aluno1.fazerAniversario();
+      professor1.setAssuntoAula("Aprendendo Herança usando JAVA.");
+      aluno1.setMatricula(3366);
 
-        System.out.println("Você fez aniversário e agora tem " + aluno1.getIdade() + " Anos");
-
-
+      System.out.println(professor1.getAssuntoAula() + "E nosso aluno de matrícula: " + aluno1.getMatricula() + " esta acompanhando perfeitamente.");
     }
 }
