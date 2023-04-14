@@ -4,6 +4,7 @@ public class Cachorro extends Animal{
 
     private int idade;
     private boolean dono;
+    private String humor;
     @Override
     public void locomover() {
 
@@ -19,13 +20,13 @@ public class Cachorro extends Animal{
 
     }
 
-    public void reagir(int idade){
+    public void reagir(int idade, String humor){
         if (idade > 3 )
         {
-            System.out.println("Tenho MAIS de 3 anos");
+            System.out.println("Tenho MAIS de 3 anos e estou: " +humor);
         }
         else{
-            System.out.println("Tenho MENOS de 3 anos");
+            System.out.println("Tenho MENOS de 3 anos e estou: " + humor);
         }
     }
 

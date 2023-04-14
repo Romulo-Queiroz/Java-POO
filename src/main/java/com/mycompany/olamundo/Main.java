@@ -2,15 +2,10 @@ package com.mycompany.olamundo;
 
 public class Main {
 
+    public String name;
     public static void main(String[] args) {
+        user usuario1 = new user();
+        
 
-       Cachorro dog = new Cachorro();
-       dog.reagir(true);
-       System.out.println(dog);
-
-       dog.reagir(5);
-        System.out.println(dog);
-
-        //polimorfismo de sobrecarga. O método tem assinaturas diferentes
     }
 }
